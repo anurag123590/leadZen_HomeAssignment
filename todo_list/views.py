@@ -3,9 +3,12 @@ from .models import List
 from .forms import ListForm
 from django.contrib import messages
 
+# for adding the items to the list
+
 def home(request):
     if request.method == 'POST':
         form= ListForm(request.POST or None)
+        # print(form)
 
         if form.is_valid():
             form.save()

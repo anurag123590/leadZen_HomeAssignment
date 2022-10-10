@@ -19,15 +19,15 @@
        {% if things.completed %}
 
             <tr class="table-secondary">
-                <td class="striker"><a href="{% url 'edit' things.id %}">{{things.item}}</a></td>
-                <td><center><a href="{% url 'uncross' things.id %}">Uncross</a></center></td>
+                <td ><a class="striker" href="{% url 'edit' things.id %}">{{things.item}}</a></td>
+                <td><center><a href="{% url 'uncross' things.id %}" >Not Completed- Uncross</a></center></td>
                 <td><center><a href="{% url 'delete' things.id %}">Delete</a></center></td>
             </tr>
 
         {% else %}
             <tr>
                 <td><a href="{% url 'edit' things.id %}">{{things.item}}</a></td>
-                <td><center><a href="{% url 'cross_off' things.id %}">Cross Off</a></center></td>
+                <td><center><a href="{% url 'cross_off' things.id %}">Mark Completed</a></center></td>
                 <td><center><a href="{% url 'delete' things.id %}">Delete</a></center></td>
             </tr>
 
